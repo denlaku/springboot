@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tl.boot.base.dao.UserDao">
+	<resultMap type="com.tl.boot.base.vo.UserVO" id="UserVO"></resultMap>
+	<sql id="user_base_query">
+		SELECT 
+			ID AS id,NAME AS name, AGE AS age, 
+			U.CREATION_DATE createDate, U.UPDATE_DATE updateDate 
+		FROM T_USER U
+	</sql>
+	<select id="findById" parameterType="long" resultMap="UserVO">
+		<include refid="user_base_query" />
+		WHERE U.ID = #{id, jdbcType=NUMERIC}
+	</select>
+	<select id="findList" resultMap="UserVO">
+		<include refid="user_base_query" />
+	</select>
+	<insert id="createUser">
+		INSERT INTO T_USER (ID,NAME,AGE)
+		VALUES(T_USER_SEQ.NEXTVAL,#{name},#{age})
+	</insert>
+	<update id="updateUser">
+		UPDATE T_USER U SET U.NAME = #{name},U.AGE = #{age}
+		WHERE U.ID = #{id}
+	</update>
+	<delete id="deleteByid">
+		DELETE FROM T_USER U WHERE U.ID = #{id}
+	</delete>
+</mapper>
