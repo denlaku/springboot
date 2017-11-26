@@ -1,3 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<!-- 
+添加 <!DOCTYPE xml> 消除警告：
+No grammar constraints (DTD or XML Schema) referenced in the document.
+-->
 <configuration>  
     <properties>  
         <!-- 文件输出格式 -->  
