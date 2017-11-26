@@ -20,6 +20,7 @@ public class UserController {
 
 	@GetMapping("/findById/{id}")
 	public Response<UserVO> findById(@PathVariable("id") Long id) {
-		return new Success<>(userService.findById(id));
+		UserVO user = userService.findById(id);
+		return new Success<>(user);
 	}
 }
