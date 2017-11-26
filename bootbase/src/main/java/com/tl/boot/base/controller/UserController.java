@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.tl.boot.base.Response;
+import com.tl.boot.base.Success;
 import com.tl.boot.base.service.UserService;
 import com.tl.boot.base.vo.UserVO;
 
@@ -17,7 +19,7 @@ public class UserController {
 	private UserService userService;
 
 	@GetMapping("/findById/{id}")
-	public UserVO findById(@PathVariable("id") Long id) {
-		return userService.findById(id);
+	public Response<UserVO> findById(@PathVariable("id") Long id) {
+		return new Success<>(userService.findById(id));
 	}
 }
