@@ -1,4 +1,4 @@
-package com.tl.boot.base;
+package com.denlaku.boot.base;
 
 public final class Success<T> extends Response<T> {
 	public Success(T data) {

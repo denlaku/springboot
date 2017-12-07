@@ -1,4 +1,4 @@
-package com.tl.boot.base;
+package com.denlaku.boot.base;
 
 import lombok.Data;
 

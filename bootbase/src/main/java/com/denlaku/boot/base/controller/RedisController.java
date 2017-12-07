@@ -1,4 +1,4 @@
-package com.tl.boot.base.controller;
+package com.denlaku.boot.base.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tl.boot.base.Response;
-import com.tl.boot.base.Success;
+import com.denlaku.boot.base.Response;
+import com.denlaku.boot.base.Success;
 
 @RestController
 @RequestMapping("/api/redis")

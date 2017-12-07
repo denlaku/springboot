@@ -1,4 +1,4 @@
-package com.tl.boot.base.vo;
+package com.denlaku.boot.base.vo;
 
 import java.util.Date;
 

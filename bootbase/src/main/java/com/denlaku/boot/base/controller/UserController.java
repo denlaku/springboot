@@ -1,4 +1,4 @@
-package com.tl.boot.base.controller;
+package com.denlaku.boot.base.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tl.boot.base.Response;
-import com.tl.boot.base.Success;
-import com.tl.boot.base.service.UserService;
-import com.tl.boot.base.vo.UserVO;
+import com.denlaku.boot.base.Response;
+import com.denlaku.boot.base.Success;
+import com.denlaku.boot.base.service.UserService;
+import com.denlaku.boot.base.vo.UserVO;
 
 @RestController
 @RequestMapping("/api/user")

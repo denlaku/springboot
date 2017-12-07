@@ -1,4 +1,4 @@
-package com.tl.boot.base;
+package com.denlaku.boot.base;
 
 public final class Error<T> extends Response<T> {
 	public Error(String message) {
