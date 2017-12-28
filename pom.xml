@@ -96,6 +96,12 @@
 			<version>${tomcat.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		<!-- 布隆过滤器 -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>23.0</version>
+		</dependency>
 	</dependencies>
 
 	<profiles>
