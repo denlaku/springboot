@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.denlaku.springboot.common.Response;
+import com.denlaku.springboot.common.Return;
 import com.denlaku.springboot.vo.UserVO;
 
 @RunWith(SpringRunner.class)
@@ -18,7 +18,7 @@ public class UserControllerTest {
 	
 	@Test
 	public void testFindById() {
-		Response<UserVO> findById = userController.findById(1L);
+		Return<UserVO> findById = userController.findById(1L);
 		System.out.println(findById);
 	}
 

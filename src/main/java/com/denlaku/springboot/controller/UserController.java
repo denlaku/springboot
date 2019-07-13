@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.denlaku.springboot.common.BaseController;
-import com.denlaku.springboot.common.Response;
+import com.denlaku.springboot.common.Return;
 import com.denlaku.springboot.service.UserService;
 import com.denlaku.springboot.vo.UserVO;
 
@@ -19,7 +19,7 @@ public class UserController extends BaseController {
 	private UserService userService;
 
 	@GetMapping("/findById/{id}")
-	public Response<UserVO> findById(@PathVariable("id") Long id) {
+	public Return<UserVO> findById(@PathVariable("id") Long id) {
 		UserVO user = null;
 		try {
 			user = userService.findById(id);
