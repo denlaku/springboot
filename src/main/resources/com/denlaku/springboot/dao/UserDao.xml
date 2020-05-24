@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.denlaku.springboot.dao.UserDao">
-	<resultMap type="com.denlaku.springboot.vo.UserVO" id="UserVO"></resultMap>
+	<resultMap type="com.denlaku.springboot.vo.User" id="userMap"></resultMap>
 	<sql id="user_base_query">
 		SELECT 
 			USER_ID AS id,
@@ -11,11 +11,11 @@
 			U.UPDATE_DATE updateDate 
 		FROM T_USER U
 	</sql>
-	<select id="findById" parameterType="long" resultMap="UserVO">
+	<select id="findById" parameterType="long" resultMap="userMap">
 		<include refid="user_base_query" />
 		WHERE U.USER_ID = #{id, jdbcType=NUMERIC}
 	</select>
-	<select id="findList" resultMap="UserVO">
+	<select id="findList" resultMap="userMap">
 		<include refid="user_base_query" />
 	</select>
 	<insert id="createUser">

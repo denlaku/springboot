@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.denlaku.springboot.dao.UserDao;
-import com.denlaku.springboot.vo.UserVO;
+import com.denlaku.springboot.vo.User;
 
 @Service
 public class UserService {
@@ -12,7 +12,7 @@ public class UserService {
 	@Autowired
 	private UserDao UserDao;
 	
-	public UserVO findById(Long id) {
+	public User findById(Long id) {
 		return UserDao.findById(id);
 	}
 }

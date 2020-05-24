@@ -4,11 +4,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.denlaku.springboot.Desc;
+import com.denlaku.springboot.Path;
+
 @RestController
 @RequestMapping("/hello")
 public class HelloController {
 
 	@GetMapping("/index")
+	@Path("path11")
+	@Desc("desc11")
 	public String index() {
 		return "Greetings from Spring Boot!";
 	}

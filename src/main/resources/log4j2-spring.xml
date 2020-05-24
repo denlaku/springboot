@@ -7,7 +7,7 @@ No grammar constraints (DTD or XML Schema) referenced in the document.
 <configuration>  
     <properties>  
         <!-- 文件输出格式 -->  
-        <property name="PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} |-%-5level [%thread] %c [%L] -| %msg%n</property>  
+        <property name="PATTERN">log4j2-%d{yyyy-MM-dd HH:mm:ss.SSS} |-%-5level [%thread] %c [%L] -| %msg%n</property>  
     </properties>  
   
     <appenders>  
@@ -17,7 +17,7 @@ No grammar constraints (DTD or XML Schema) referenced in the document.
     </appenders>  
       
     <loggers>  
-        <logger name="com.tl.boot" level="debug" />  
+        <logger name="com.denlaku.springboot" level="info" />  
         <root level="info">  
             <appenderref ref="CONSOLE" />  
         </root>  

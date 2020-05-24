@@ -1,7 +1,7 @@
 package com.denlaku.springboot.dao;
 
-import com.denlaku.springboot.vo.UserVO;
+import com.denlaku.springboot.vo.User;
 
 public interface UserDao {
-	public UserVO findById(Long id);
+	public User findById(Long id);
 }

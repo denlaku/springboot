@@ -5,14 +5,14 @@ import java.util.Date;
 import lombok.Data;
 
 @Data
-public class UserVO {
+public class User {
 	private Long id;
 	private String name;
 	private Integer age;
 	private String sex;
 
-	private Date createDate;
-	private Date updateDate;
+	private Date createdAt;
+	private Date updatedAt;
 
 	@Override
 	public boolean equals(Object obj) {
