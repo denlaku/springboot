@@ -1,0 +1,13 @@
+
+server:
+  port: 8080
+  context-path: /boot/
+  
+spring:  datasource:    username: root
+    password: root
+    url: jdbc:mysql://10.10.10.4:3306/demo?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  jackson:    date-format: yyyy-MM-dd HH:mm:ss    logging:  level: 
+    ERROR: org.springframework
+myConfig:  my-bean-definition-registry-class: com.denlaku.springboot.processors.MyBeanDefinitionRegistry${random.int}

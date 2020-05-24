@@ -1,0 +1,3 @@
+org.springframework.boot.SpringApplicationRunListener=com.denlaku.springboot.listeners.MyApplicationRunListener
+org.springframework.context.ApplicationListener=com.denlaku.springboot.listeners.MyApplicationListener
+org.springframework.context.ApplicationContextInitializer=com.denlaku.springboot.initializers.MyContextInitializer
